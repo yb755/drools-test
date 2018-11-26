@@ -14,7 +14,7 @@ public class App {
 		// 默认自动加载 META-INF/kmodule.xml
 		KieContainer kieContainer = kieServices.getKieClasspathContainer();
 		// kmodule.xml 中定义的 ksession name
-		KieSession kieSession = kieContainer.newKieSession("all-rules");
+		KieSession kieSession = kieContainer.newKieSession("simpleRuleKSession");
 
 		Person p1 = new Person();
 		p1.setAge(20);

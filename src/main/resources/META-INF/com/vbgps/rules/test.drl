@@ -1,4 +1,4 @@
-package cn.xiaojf.rules
+package cn.vbgps.rules
 
 import com.vbgps.drools_test.Car;
 rule "car-discount>30"
