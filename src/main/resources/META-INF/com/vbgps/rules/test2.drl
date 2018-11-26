@@ -1,0 +1,16 @@
+package cn.vbgps.rules
+
+import com.vbgps.drools_test.Car;
+rule "car-discount-20"
+when
+    $car : Car(person.age >= 60 && person.age < 80)
+    then
+        $car.setDiscount(20);
+    end
+
+rule "car-discount-10"
+when
+    $car : Car(person.age >= 80 && person.age < 90)
+    then
+        $car.setDiscount(10);
+    end

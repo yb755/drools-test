@@ -1,16 +1,20 @@
 package cn.vbgps.rules
 
+function double calculateSquare (double value) {
+   return value * value;
+}
+
 import com.vbgps.drools_test.Car;
-rule "car-discount>30"
+rule "car-discount-70"
 when
-    $car : Car(person.age > 30)
+    $car : Car(person.age >= 0 && person.age < 30)
     then
-        $car.setDiscount(80);
+        $car.setDiscount(70);
     end
 
-rule "car-discount<=30"
+rule "car-discount-40"
 when
-    $car : Car(person.age <= 30)
+    $car : Car(person.age >= 30 && person.age < 60)
     then
-        $car.setDiscount(90);
+        $car.setDiscount(40);
     end
